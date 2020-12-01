@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>눈에 비친 색과 삶</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+    />
+    <link rel="stylesheet" href="./scss/reset.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="stylesheet" href="./scss/intro.css" />
+    <link rel="stylesheet" href="./scss/header.css" />
+    <script type="module" src="./script/main.js"></script>
+    <script type="module" src="./script/htmlModule.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <section id="main"></section>
+    <footer id="footer"></footer>
+    <section id="intro">
+      <div class="door">
+        <img src="./img/bg.jpg" alt="" />
+        <div class="textBox">
+          <span>Solo Exhibition</span>
+          <h2>VIETNAM</h2>
+          <p>눈에 비친 색과 삶</p>
+          <button id="enter">입장하기</button>
+        </div>
+      </div>
+      <div class="greeting">
+        <p>Made By <span>ys</span></p>
+        <p>Art By <span>sn</span></p>
+      </div>
+
+      <svg>
+        <defs>
+          <filter id="waveBg" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence
+              baseFrequency="0.01 0.5"
+              result="wave"
+              in="SourceGraphic"
+              numOctaves="3"
+              seed="30"
+            />
+            <feDisplacementMap in="SourceGraphic" scale="5" />
+          </filter>
+        </defs>
+      </svg>
+    </section>
+    <script type="module" src="./script/intro.js"></script>
+  </body>
+</html>

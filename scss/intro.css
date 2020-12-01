@@ -1,0 +1,88 @@
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+  background-color: black;
+  z-index: 300; }
+  #intro.fadeOut {
+    opacity: 0; }
+  #intro .greeting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition-delay: 4s;
+    transition: opacity 1s; }
+    #intro .greeting.fadeOut {
+      opacity: 0; }
+    #intro .greeting > p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      color: white;
+      animation-name: fade;
+      animation-duration: 2s; }
+      #intro .greeting > p:last-of-type {
+        animation-delay: 3s; }
+  #intro .door {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fafcd0;
+    font-family: "NanumSquare", sans-serif;
+    background-color: black; }
+    #intro .door > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%) scale(1.2);
+      filter: url(#waveBg); }
+    #intro .door .textBox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+      #intro .door .textBox > span {
+        font-family: "Amatic SC", cursive;
+        font-size: 3em;
+        color: #554f5d; }
+      #intro .door .textBox h2 {
+        font-family: "Amatic SC", cursive;
+        font-size: 14em; }
+      #intro .door .textBox p {
+        letter-spacing: 1.6em; }
+      #intro .door .textBox button {
+        padding: 10px 20px;
+        box-sizing: border-box;
+        color: white;
+        background-color: #0d161c;
+        border-radius: 4px;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%); }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/*# sourceMappingURL=intro.css.map */
