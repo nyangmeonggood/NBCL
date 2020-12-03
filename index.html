@@ -24,6 +24,11 @@
   <body>
     <header id="header"></header>
     <section id="main"></section>
+    <ul id="scrollspy">
+      <li class="current">1</li>
+      <li class="divLine"><span></span></li>
+      <li class="total"></li>
+    </ul>
     <footer id="footer"></footer>
     <section id="intro">
       <div class="door">
@@ -32,29 +37,14 @@
           <span>Solo Exhibition</span>
           <h2>VIETNAM</h2>
           <p>눈에 비친 색과 삶</p>
-          <button id="enter">입장하기</button>
+          <button id="enter"><span>발권하기</span></button>
         </div>
       </div>
       <div class="greeting">
         <p>Made By <span>ys</span></p>
         <p>Art By <span>sn</span></p>
       </div>
-
-      <svg>
-        <defs>
-          <filter id="waveBg" x="0%" y="0%" width="100%" height="100%">
-            <feTurbulence
-              baseFrequency="0.01 0.5"
-              result="wave"
-              in="SourceGraphic"
-              numOctaves="3"
-              seed="30"
-            />
-            <feDisplacementMap in="SourceGraphic" scale="5" />
-          </filter>
-        </defs>
-      </svg>
-    </section>
+    </section> 
     <script type="module" src="./script/intro.js"></script>
   </body>
 </html>

@@ -4,11 +4,11 @@
   height: 100vh;
   top: 0;
   left: 0;
-  transition: opacity 1s;
+  transition: top 1s;
   background-color: black;
   z-index: 300; }
   #intro.fadeOut {
-    opacity: 0; }
+    top: -150%; }
   #intro .greeting {
     position: absolute;
     top: 50%;
@@ -39,7 +39,7 @@
     width: 100%;
     height: 100%;
     color: #fafcd0;
-    font-family: "NanumSquare", sans-serif;
+    font-family: "Helvetica Neue", "NanumSquare", sans-serif;
     background-color: black; }
     #intro .door > img {
       position: absolute;
@@ -49,8 +49,7 @@
       width: 100%;
       min-width: 100%;
       min-height: 100%;
-      transform: translate(-50%, -50%) scale(1.2);
-      filter: url(#waveBg); }
+      transform: translate(-50%, -50%) scale(1.2); }
     #intro .door .textBox {
       position: absolute;
       top: 50%;
@@ -67,15 +66,21 @@
       #intro .door .textBox p {
         letter-spacing: 1.6em; }
       #intro .door .textBox button {
-        padding: 10px 20px;
-        box-sizing: border-box;
-        color: white;
-        background-color: #0d161c;
-        border-radius: 4px;
+        color: #111;
         position: absolute;
         top: 110%;
         left: 50%;
-        transform: translateX(-50%); }
+        transform: translateX(-50%);
+        border: 2px solid white;
+        border-radius: 4px; }
+        #intro .door .textBox button span {
+          padding: 6px 20px;
+          border: 2px solid #111;
+          color: #111;
+          display: block;
+          background-color: white;
+          width: 100%;
+          letter-spacing: -0.05em; }
 
 @keyframes fade {
   0% {

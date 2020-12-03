@@ -7,9 +7,13 @@ body::-webkit-scrollbar {
   width: 0; }
 
 #main {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden;
+  font-family: "Helvetica Neue", "NanumSquare", sans-serif; }
   #main > div {
     position: absolute;
     width: 100%;
@@ -20,7 +24,52 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     background-color: white; }
+    #main > div .textBox h2 {
+      font-size: 100px;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: #111;
+      color: transparent;
+      margin-bottom: 10px;
+      transition: all 1s; }
+      #main > div .textBox h2:hover {
+        color: #111;
+        letter-spacing: -0.1em; }
+    #main > div .textBox span {
+      font-size: 12px;
+      color: #999; }
+    #main > div .textBox p {
+      font-size: 14px; }
+    #main > div .imgBox {
+      width: 40%; }
+      #main > div .imgBox img {
+        display: block;
+        height: 100%; }
     #main > div.active {
       z-index: 1; }
+
+#scrollspy {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  right: 50px;
+  transform: translateY(700%) rotate(90deg);
+  transform-origin: right;
+  z-index: 200;
+  font-weight: bold; }
+  #scrollspy .divLine {
+    width: 2px;
+    height: 14px;
+    background-color: #111;
+    margin: 0 10px;
+    transform: rotate(10deg); }
+  #scrollspy::before, #scrollspy::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #111;
+    margin: 0 20px; }
 
 /*# sourceMappingURL=main.css.map */
