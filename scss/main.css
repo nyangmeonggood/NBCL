@@ -21,29 +21,38 @@ body::-webkit-scrollbar {
     top: 0;
     left: 0;
     display: flex;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
     justify-content: center;
     align-items: center;
     background-color: white; }
-    #main > div .textBox h2 {
-      font-size: 100px;
-      -webkit-text-stroke: 2px;
-      -webkit-text-stroke-color: #111;
-      color: transparent;
-      margin-bottom: 10px;
-      transition: all 1s; }
-      #main > div .textBox h2:hover {
-        color: #111;
-        letter-spacing: -0.1em; }
-    #main > div .textBox span {
-      font-size: 12px;
-      color: #999; }
-    #main > div .textBox p {
-      font-size: 14px; }
-    #main > div .imgBox {
+    #main > div .textBox {
       width: 40%; }
+      #main > div .textBox h2 {
+        font-size: 100px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: #111;
+        color: transparent;
+        margin-bottom: 10px;
+        transition: all 1s; }
+        #main > div .textBox h2:hover {
+          color: #111;
+          letter-spacing: -0.1em; }
+      #main > div .textBox span {
+        font-size: 12px;
+        color: #999; }
+      #main > div .textBox p {
+        font-size: 14px; }
+    #main > div .imgBox {
+      width: 60%;
+      height: 100%; }
       #main > div .imgBox img {
         display: block;
-        height: 100%; }
+        max-width: 100%;
+        max-height: 100%; }
     #main > div.active {
       z-index: 1; }
 
