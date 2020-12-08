@@ -22,6 +22,12 @@
     background-color: black;
     transition-delay: 4s;
     transition: opacity 1s;
+    letter-spacing: 0.01em;
+    span {
+      margin-top: 4px;
+      font-weight: bold;
+      display: block;
+    }
     &.fadeOut {
       opacity: 0;
     }

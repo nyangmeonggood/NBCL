@@ -4,14 +4,16 @@ function htmlInClude() {
       return response.text();
     })
     .then((data) => {
-      document.querySelector("header").innerHTML = data;
+      if (document.querySelector("header"))
+        document.querySelector("header").innerHTML = data;
     });
   fetch("./footer.html")
     .then((response) => {
       return response.text();
     })
     .then((data) => {
-      document.querySelector("footer").innerHTML = data;
+      if (document.querySelector("footer"))
+        document.querySelector("footer").innerHTML = data;
     });
 }
 

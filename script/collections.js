@@ -44,7 +44,7 @@ const setModal = async (e) => {
 };
 const toggleModal = () => {
   $modal.classList.toggle("active");
-  document.body.classList.toggle("modalFix");
+  // document.body.classList.toggle("modalFix");
 };
 
 const setModalText = (e) => {
@@ -53,6 +53,7 @@ const setModalText = (e) => {
 };
 
 $modalCloseBtn.addEventListener("click", toggleModal);
+$modal.querySelector(".modalBG").addEventListener("click", toggleModal);
 
 init();
 function init() {

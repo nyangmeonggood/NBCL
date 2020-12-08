@@ -39,8 +39,11 @@ body.modalFix {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); }
+  height: 100%; }
+  #modal .modalBG {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
   #modal.active {
     display: block; }
   #modal .modalBox {
@@ -55,19 +58,23 @@ body.modalFix {
     padding: 14px;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: white; }
+    background-color: white;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards; }
     #modal .modalBox > img {
       display: block;
       width: 70%; }
     #modal .modalBox .textBox {
       position: relative;
-      width: 30%; }
+      width: 30%;
+      padding: 20px 14px; }
     #modal .modalBox button {
       position: absolute;
       top: 14px;
       right: 14px;
-      width: 30px;
-      height: 30px; }
+      width: 20px;
+      height: 20px; }
       #modal .modalBox button:active {
         transform: scale(0.8); }
       #modal .modalBox button span {
@@ -82,5 +89,16 @@ body.modalFix {
           transform: translate(-50%, -50%) rotate(45deg); }
         #modal .modalBox button span:last-child {
           transform: translate(-50%, -50%) rotate(-45deg); }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 0.35em; }
 
 /*# sourceMappingURL=collections.css.map */

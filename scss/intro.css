@@ -18,7 +18,12 @@
     height: 100%;
     background-color: black;
     transition-delay: 4s;
-    transition: opacity 1s; }
+    transition: opacity 1s;
+    letter-spacing: 0.01em; }
+    #intro .greeting span {
+      margin-top: 4px;
+      font-weight: bold;
+      display: block; }
     #intro .greeting.fadeOut {
       opacity: 0; }
     #intro .greeting > p {

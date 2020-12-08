@@ -17,6 +17,7 @@ setTimeout(() => {
 
 $enter.addEventListener("click", () => {
   $intro.classList.add("fadeOut");
+  document.body.querySelector("#main").children[0].classList.add("active");
   isLoaded = true;
   window.removeEventListener("scroll", scrollBlock);
   setTimeout(() => {

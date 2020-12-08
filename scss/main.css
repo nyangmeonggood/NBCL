@@ -29,25 +29,27 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     background-color: white; }
-    #main > div .textBox {
+    #main > div.left .textBox {
+      width: 35%; }
+    #main > div.left .imgBox {
+      width: 60%; }
+    #main > div.right .textBox {
+      width: 60%; }
+    #main > div.right .imgBox {
       width: 40%; }
-      #main > div .textBox h2 {
-        font-size: 100px;
-        -webkit-text-stroke: 2px;
-        -webkit-text-stroke-color: #111;
-        color: transparent;
-        margin-bottom: 10px;
-        transition: all 1s; }
-        #main > div .textBox h2:hover {
-          color: #111;
-          letter-spacing: -0.1em; }
-      #main > div .textBox span {
-        font-size: 12px;
-        color: #999; }
-      #main > div .textBox p {
-        font-size: 14px; }
+    #main > div .textBox h2 {
+      font-size: 100px;
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: #111;
+      color: transparent;
+      margin-bottom: 10px;
+      transition: all 1s; }
+    #main > div .textBox span {
+      font-size: 12px;
+      color: #999; }
+    #main > div .textBox p {
+      font-size: 30px; }
     #main > div .imgBox {
-      width: 60%;
       height: 100%; }
       #main > div .imgBox img {
         display: block;
@@ -55,6 +57,11 @@ body::-webkit-scrollbar {
         max-height: 100%; }
     #main > div.active {
       z-index: 1; }
+      #main > div.active:first-child .textBox h2 {
+        transition-delay: 0.6s; }
+      #main > div.active .textBox h2 {
+        color: #111;
+        letter-spacing: -0.1em; }
 
 #scrollspy {
   position: fixed;
@@ -66,9 +73,10 @@ body::-webkit-scrollbar {
   transform: translateY(700%) rotate(90deg);
   transform-origin: right;
   z-index: 200;
-  font-weight: bold; }
+  font-family: "Helvetica Neue", "NanumSquare", sans-serif;
+  font-weight: 900; }
   #scrollspy .divLine {
-    width: 2px;
+    width: 1px;
     height: 14px;
     background-color: #111;
     margin: 0 10px;
@@ -77,7 +85,7 @@ body::-webkit-scrollbar {
     content: "";
     display: block;
     width: 60px;
-    height: 2px;
+    height: 1px;
     background-color: #111;
     margin: 0 20px; }
 
