@@ -8,7 +8,25 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 100; }
+  z-index: 100;
+  font-family: "Helvetica Neue", "NanumSquare", sans-serif; }
+  @media screen and (max-width: 900px) {
+    header {
+      z-index: 300;
+      padding: 0 20px; }
+      header.menu .m_menu {
+        overflow: hidden; }
+        header.menu .m_menu span {
+          top: 50% !important;
+          left: 50%; }
+          header.menu .m_menu span:nth-of-type(1) {
+            transform: translate(-50%, -50%) rotate(45deg); }
+          header.menu .m_menu span:nth-of-type(2) {
+            left: 100%; }
+          header.menu .m_menu span:nth-of-type(3) {
+            transform: translate(-50%, -50%) rotate(-45deg); }
+      header.menu > ul {
+        left: 0; } }
   header h1 {
     width: 140px;
     height: 24px;
@@ -19,11 +37,59 @@ header {
     header h1 svg {
       width: 100%;
       height: 100%; }
+  header .m_menu {
+    display: none; }
+    @media screen and (max-width: 900px) {
+      header .m_menu {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 20px;
+        z-index: 100; }
+        header .m_menu span {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: black; }
+          header .m_menu span:nth-of-type(1) {
+            top: 0; }
+          header .m_menu span:nth-of-type(2) {
+            top: 50%;
+            transform: translateY(-50%); }
+          header .m_menu span:nth-of-type(3) {
+            top: 100%;
+            transform: translateY(-100%); } }
   header > ul {
     display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    header > ul > li:not(:last-child) {
-      margin-right: 12px; }
+    align-items: center; }
+    @media screen and (min-width: 900px) {
+      header > ul {
+        justify-content: space-between; }
+        header > ul > li:not(:last-child) {
+          margin-right: 12px; } }
+    @media screen and (max-width: 900px) {
+      header > ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white; }
+        header > ul li {
+          width: 100%;
+          margin-bottom: 14px;
+          padding-left: 10%;
+          font-size: 12vw;
+          font-weight: bold;
+          letter-spacing: -0.01em; }
+          header > ul li:hover {
+            font-weight: 500;
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: #111;
+            color: transparent; } }
 
 /*# sourceMappingURL=header.css.map */

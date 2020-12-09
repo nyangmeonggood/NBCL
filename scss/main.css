@@ -20,25 +20,104 @@ body::-webkit-scrollbar {
     height: 100%;
     top: 0;
     left: 0;
-    display: flex;
     top: 50%;
     left: 50%;
-    width: 90%;
-    height: 90%;
     transform: translate(-50%, -50%);
-    justify-content: center;
-    align-items: center;
     background-color: white; }
-    #main > div.left .textBox {
-      width: 35%; }
-    #main > div.left .imgBox {
-      width: 60%; }
-    #main > div.right .textBox {
-      width: 60%; }
-    #main > div.right .imgBox {
-      width: 40%; }
+    @media screen and (min-width: 900px) {
+      #main > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: 90%; }
+        #main > div.center .textBox {
+          width: 55%; }
+        #main > div.center .imgBox {
+          width: 45%; }
+        #main > div.left .textBox {
+          width: 50%; }
+        #main > div.left .imgBox {
+          width: 50%; }
+          #main > div.left .imgBox img {
+            width: 90%; }
+        #main > div.right .textBox {
+          width: 50%; }
+        #main > div.right .imgBox {
+          width: 50%; }
+        #main > div .textBox h2 {
+          font-size: 100px; }
+        #main > div .textBox h6 {
+          font-size: 30px;
+          margin-bottom: 14px; }
+        #main > div .textBox p {
+          margin-top: 36px;
+          margin-bottom: 14px;
+          font-size: 24px;
+          line-height: 1.2em; }
+        #main > div .imgBox {
+          position: relative; }
+          #main > div .imgBox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); } }
+    @media screen and (max-width: 900px) {
+      #main > div {
+        width: 100%;
+        height: 100%; }
+        #main > div .br_pc {
+          display: none; }
+        #main > div:nth-of-type(1) .textBox {
+          top: 64%; }
+        #main > div.right .textBox {
+          text-align: right; }
+        #main > div.active .imgBox img {
+          opacity: 1;
+          transition-delay: 1s; }
+        #main > div .textBox,
+        #main > div .imgBox {
+          position: absolute; }
+        #main > div .textBox {
+          width: 90%;
+          top: 20%;
+          left: 5%; }
+          #main > div .textBox h2 {
+            font-size: 11vw; }
+          #main > div .textBox h6 {
+            font-size: 6vw; }
+          #main > div .textBox p {
+            font-size: 4.2vw;
+            line-height: 1.2em;
+            letter-spacing: -0.01em;
+            margin-top: 20px;
+            margin-bottom: 10px; }
+        #main > div .imgBox {
+          top: 0;
+          left: 0;
+          height: 100%;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          z-index: -1;
+          opacity: 0.3; }
+          #main > div .imgBox img {
+            position: absolute;
+            transition: opacity 0.5s ease-in;
+            opacity: 0;
+            bottom: 50px; }
+            #main > div .imgBox img.left {
+              width: 76%;
+              left: 0; }
+            #main > div .imgBox img.bottom {
+              width: 85%;
+              left: 70%;
+              transform: translateX(-50%); }
+            #main > div .imgBox img.right {
+              width: 46%;
+              right: 0; } }
     #main > div .textBox h2 {
-      font-size: 100px;
       -webkit-text-stroke: 2px;
       -webkit-text-stroke-color: #111;
       color: transparent;
@@ -47,14 +126,13 @@ body::-webkit-scrollbar {
     #main > div .textBox span {
       font-size: 12px;
       color: #999; }
-    #main > div .textBox p {
-      font-size: 30px; }
     #main > div .imgBox {
       height: 100%; }
       #main > div .imgBox img {
         display: block;
         max-width: 100%;
-        max-height: 100%; }
+        max-height: 100%;
+        filter: grayscale(1); }
     #main > div.active {
       z-index: 1; }
       #main > div.active:first-child .textBox h2 {
@@ -62,19 +140,44 @@ body::-webkit-scrollbar {
       #main > div.active .textBox h2 {
         color: #111;
         letter-spacing: -0.1em; }
+        @media screen and (max-width: 900px) {
+          #main > div.active .textBox h2 {
+            letter-spacing: -0.01em; } }
+      #main > div.active .imgBox img {
+        filter: grayscale(0);
+        transition: filter 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition-delay: 0.4s; }
+        @media screen and (max-width: 900px) {
+          #main > div.active .imgBox img {
+            filter: grayscale(0.5); } }
 
 #scrollspy {
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 50%;
-  right: 50px;
-  transform: translateY(700%) rotate(90deg);
-  transform-origin: right;
   z-index: 200;
-  font-family: "Helvetica Neue", "NanumSquare", sans-serif;
-  font-weight: 900; }
+  font-weight: 900;
+  font-family: "Helvetica Neue", "NanumSquare", sans-serif; }
+  @media screen and (min-width: 900px) {
+    #scrollspy {
+      top: 50%;
+      right: 50px;
+      transform: translateY(700%) rotate(90deg);
+      transform-origin: right; } }
+  @media screen and (max-width: 900px) {
+    #scrollspy {
+      color: rgba(0, 0, 0, 0.2);
+      bottom: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      #scrollspy .current {
+        color: #111;
+        font-weight: 900; }
+      #scrollspy .divLine {
+        background-color: rgba(0, 0, 0, 0.2); }
+      #scrollspy::before, #scrollspy::after {
+        background-color: rgba(0, 0, 0, 0.2); } }
   #scrollspy .divLine {
     width: 1px;
     height: 14px;

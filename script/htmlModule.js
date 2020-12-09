@@ -6,6 +6,11 @@ function htmlInClude() {
     .then((data) => {
       if (document.querySelector("header"))
         document.querySelector("header").innerHTML = data;
+
+      document.querySelector(".m_menu").addEventListener("click", () => {
+        document.querySelector("#header").classList.toggle("menu");
+        console.log("hi");
+      });
     });
   fetch("./footer.html")
     .then((response) => {

@@ -86,6 +86,13 @@
           background-color: white;
           width: 100%;
           letter-spacing: -0.05em; }
+    @media screen and (max-width: 900px) {
+      #intro .door .textBox > span {
+        font-size: 2em; }
+      #intro .door .textBox h2 {
+        font-size: 8em; }
+      #intro .door .textBox p {
+        font-size: 0.7em; } }
 
 @keyframes fade {
   0% {
